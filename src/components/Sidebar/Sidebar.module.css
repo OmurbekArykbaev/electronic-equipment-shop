@@ -1,0 +1,22 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
+.wrapper {
+  background-color: antiquewhite;
+  width: 100%;
+  padding: 2rem 0;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+}

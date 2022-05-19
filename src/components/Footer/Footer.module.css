@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  /* position: absolute; */
+  /* bottom: 0;
+  right: 0;
+  left: 0; */
+
+  background-color: #9c7178;
+  padding: 1.5rem 0;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+}

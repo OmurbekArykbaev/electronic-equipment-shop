@@ -1,7 +1,13 @@
 import React from "react"
+import { Link } from "react-router-dom"
+import styles from "./Link.module.css"
 
-const Link = () => {
-  return <div>Link</div>
+const LinkTo = ({ title, path = "/" }) => {
+  return (
+    <li className={styles.link}>
+      <Link to={path}>{title}</Link>
+    </li>
+  )
 }
 
-export default Link
+export default LinkTo

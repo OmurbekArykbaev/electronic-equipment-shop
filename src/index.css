@@ -1,9 +1,14 @@
 *::after,
 ::before,
-html {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 body {
@@ -13,6 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 :root {
