@@ -1,0 +1,22 @@
+    - FrontEnd
+        * pages
+            Home
+            About
+            Cart
+        * Features
+            Search
+            Filter (by name,price,raiting)
+            Pagination
+            Cart
+            LoadingState
+            Fixed Aside bar
+        * Components
+            - Ad Banner
+            - Product Card
+            - Button
+            - Typography
+            - Raiting
+        * Products
+
+
+- BackEnd (API)
