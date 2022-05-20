@@ -16,8 +16,19 @@
 
   cursor: pointer;
 }
-.btn > svg {
-  color: var(--color-prim);
+
+.btn.fill {
+  background-color: var(--color-prim);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 2rem;
+}
+span {
+  display: flex;
+  align-items: center;
+}
+span > svg {
   margin-right: 10px;
 }
 

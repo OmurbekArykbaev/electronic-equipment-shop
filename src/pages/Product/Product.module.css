@@ -1,0 +1,23 @@
+.product {
+  margin-top: 150px;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.imgBlock {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.imgBlock > img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
+}
