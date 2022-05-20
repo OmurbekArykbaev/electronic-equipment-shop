@@ -8,7 +8,7 @@ const Card = () => {
   const product = data[0]
   return (
     <div className={styles.card}>
-      <Link to="/">
+      <Link to="/product/12">
         <div className={styles.wrapper}>
           <div className={styles.content}>
             <img src="https://items.s1.citilink.ru/1740219_v01_b.jpg" alt="" />

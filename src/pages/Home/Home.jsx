@@ -1,7 +1,7 @@
 import React from "react"
 import { Banner } from "../../components"
 import Card from "../../components/ui/Card/Card"
-import styles from "./HomePage.module.css"
+import styles from "./Home.module.css"
 
 const HomePage = () => {
   return (

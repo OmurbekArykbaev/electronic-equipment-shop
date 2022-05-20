@@ -1,7 +1,12 @@
 .card {
   max-width: 300px;
-
   border-radius: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: inset 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 .wrapper {
   display: flex;
@@ -32,6 +37,7 @@
 .control {
   width: 100%;
   display: grid;
+  align-items: center;
   grid-template-columns: 2fr 1fr;
 
   margin-top: 3rem;
@@ -45,6 +51,7 @@
 
 .btns {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
