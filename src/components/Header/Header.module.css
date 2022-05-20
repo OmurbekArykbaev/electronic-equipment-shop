@@ -1,13 +1,60 @@
 .header {
-  background-color: #9c7178;
+  /* background-color: #9c7178; */
 }
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 1200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   margin: 0 auto;
+}
+/* First Floor */
+.logo {
+  width: 30%;
+  color: var(--color-prim);
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone > p {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .items {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+/* Second floor */
+
+.category {
+  width: 30%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links {
   display: flex;
   justify-content: center;
   list-style-type: none;

@@ -1,0 +1,24 @@
+.logo {
+  width: 100%;
+}
+.logo > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.logo > a:hover {
+  color: var(--color-prim);
+}
+.logo > a > svg {
+  font-size: 20px;
+  margin-bottom: 0.3rem;
+}
+
+.logo > a > p {
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0;
+}

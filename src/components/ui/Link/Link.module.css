@@ -1,0 +1,16 @@
+.link {
+  margin-right: 2rem;
+  /* padding: 2rem 0; */
+}
+
+.link > a {
+  font-size: 14px;
+  color: #151528;
+  text-align: center;
+
+  padding: 1.9rem 0;
+}
+
+.link > a:hover {
+  color: orange;
+}

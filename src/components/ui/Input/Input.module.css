@@ -1,0 +1,19 @@
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid #dfdfe1;
+  font-size: 16px;
+  padding: 1px 53px 5px 2px;
+}
+
+.input:hover,
+.input:focus {
+  border-bottom: 1px solid var(--color-prim);
+}
+.input:active,
+.input:focus {
+  outline: none;
+}
