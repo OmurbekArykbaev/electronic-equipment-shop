@@ -28,6 +28,9 @@ body {
   /* todo */
   --color-prim: #fe7200;
   --color-dark: #151528;
+  --color-light: #5d5d64;
+  --color-gray: rgb(244, 244, 245);
+
   --shadow: inset 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }

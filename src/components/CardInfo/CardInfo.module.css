@@ -1,0 +1,82 @@
+.cardInfo {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.bonus {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.bonus > span {
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  background-color: rgb(230, 78, 67);
+  border-radius: 0.4rem;
+  margin-right: 0.7rem;
+}
+
+.bonus > span:last-child {
+  background-color: var(--color-prim);
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+}
+
+.prices > span {
+  color: var(--color-light);
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+
+.prices > span:last-child {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.btns {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+
+.btns > button {
+  height: auto;
+  margin-right: 2rem;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.shipping {
+  padding: 1rem 3rem;
+  background-color: rgb(255, 248, 235);
+}
+.shipping > p {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shipping > p > svg {
+  margin-right: 0.3rem;
+  color: green;
+  font-size: 14px;
+}

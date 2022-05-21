@@ -24,6 +24,22 @@
   font-weight: 300;
   padding: 0 2rem;
 }
+
+.btn.fill.circle {
+  justify-content: center;
+  padding: 20px 15px;
+  border-radius: 100%;
+  background-color: rgb(244, 244, 245);
+  border: none;
+}
+
+.btn.fill.circle > span > svg {
+  color: var(--color-light);
+  margin: 0 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 span {
   display: flex;
   align-items: center;
