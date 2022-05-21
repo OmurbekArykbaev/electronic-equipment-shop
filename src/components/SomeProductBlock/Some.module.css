@@ -1,0 +1,21 @@
+.some {
+  margin-top: 100px;
+  width: 100%;
+  max-height: auto;
+}
+
+.wrapper {
+  padding: 1rem 5rem;
+  display: grid;
+  grid-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
+}
+
+h1 {
+  padding: 0 1rem;
+  font-size: 26px;
+  line-height: 29px;
+  font-weight: 300;
+}

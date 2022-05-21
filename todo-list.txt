@@ -1,6 +1,5 @@
     - FrontEnd
         * pages
-            Home
             About
             Cart
         * Features
@@ -11,11 +10,6 @@
             LoadingState
             Fixed Aside bar
         * Components
-            - Ad Banner
-            - Product Card
-            - Button
-            - Typography
-            - Raiting
         * Products
 
 

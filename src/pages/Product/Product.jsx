@@ -1,5 +1,6 @@
 import React from "react"
 import CardInfo from "../../components/CardInfo/CardInfo"
+import Some from "../../components/SomeProductBlock/Some"
 import styles from "./Product.module.css"
 
 const Product = () => {
@@ -11,6 +12,7 @@ const Product = () => {
         </div>
         <CardInfo />
       </div>
+      <Some />
     </section>
   )
 }

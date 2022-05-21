@@ -1,22 +1,21 @@
 import React from "react"
-import data from "../../../assets/data"
+
 import { Link } from "react-router-dom"
 import styles from "./Card.module.css"
 import { BsCartPlus, BsBookmarkPlus } from "react-icons/bs"
 
-const Card = () => {
-  const product = data[0]
+const Card = ({ id, name, image, price }) => {
   return (
     <div className={styles.card}>
-      <Link to="/product/12">
+      <Link to={`/product/${id}`}>
         <div className={styles.wrapper}>
           <div className={styles.content}>
-            <img src="https://items.s1.citilink.ru/1740219_v01_b.jpg" alt="" />
-            <p>Смартфон Xiaomi Poco F4 GT 12/256Gb, черный</p>
+            <img src={image} alt={name} />
+            <p>{name}</p>
           </div>
 
           <div className={styles.control}>
-            <span>$699</span>
+            <span>{price} сом</span>
             <div className={styles.btns}>
               <button>
                 <BsBookmarkPlus />
