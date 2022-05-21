@@ -7,7 +7,7 @@ import { AiOutlineUnorderedList } from "react-icons/ai"
 import { useSelector } from "react-redux"
 
 const Header = () => {
-  const cartCount = useSelector((state) => state.cart.cart)
+  const cartCount = useSelector((state) => state.cart.cartItems)
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>

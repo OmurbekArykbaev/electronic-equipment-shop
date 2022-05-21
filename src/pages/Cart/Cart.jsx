@@ -1,22 +1,33 @@
 import React from "react"
 import styles from "./Cart.module.css"
 import { useSelector } from "react-redux"
+import { Button, Typography } from "../../components/ui"
+import CardInCart from "../../components/ui/CardInCart/CardInCart"
 
 const Cart = () => {
-  const productInCart = useSelector((state) => state.cart.cart)
+  const productInCart = useSelector((state) => state.cart.cartItems)
   return (
     <section style={styles.cart}>
       <div style={styles.wrapper}>
         <div style={styles.control}>
-          <button>Продолжить покупку</button>
-          <h3>В корзине имеется {productInCart?.length} товара.</h3>
+          <Button fill title={"Продолжить покупку"} />
+          <Typography
+            text={`Количество ${productInCart?.length} товаров, на сумму 00.`}
+            type="h1"
+            size="34px"
+            color="var(--color-prim)"
+            weight="300"
+          />
         </div>
         <ul className={styles.list}>
-          {productInCart.map((product) => (
-            <li key={product.id}>
-              <h1>{product.name}</h1>
-              <h3>{product.price}</h3>
-            </li>
+          {productInCart?.map((product) => (
+            <CardInCart
+              key={product.id}
+              id={product.id}
+              image={product.image}
+              price={product.price}
+              name={product.name}
+            />
           ))}
         </ul>
       </div>

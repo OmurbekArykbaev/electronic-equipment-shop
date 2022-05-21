@@ -1,7 +1,9 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-  cart: [],
+  cartItems: localStorage.getItem("cartItems")
+    ? JSON.parse(localStorage.getItem("cartItems"))
+    : [],
 }
 
 export const cartSlice = createSlice({
@@ -9,10 +11,11 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addProduct: (state, action) => {
-      state.cart.push(action.payload)
+      state.cartItems.push(action.payload)
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },
     deleteProduct: (state, action) => {
-      state.cart.filter((product) => action.payload !== product.id)
+      state.cartItems.filter((product) => action.payload !== product.id)
     },
   },
 })
