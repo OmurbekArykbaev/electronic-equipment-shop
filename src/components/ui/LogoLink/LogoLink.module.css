@@ -1,7 +1,9 @@
 .logo {
   width: 100%;
 }
+
 .logo > a {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,4 +23,15 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
+}
+
+.logo > a > span {
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  background-color: var(--color-prim);
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }

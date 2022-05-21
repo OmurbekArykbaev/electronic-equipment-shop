@@ -1,10 +1,17 @@
 import React from "react"
-
+import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import styles from "./Card.module.css"
+import { addProduct } from "../../../Store/cartSlice"
 import { BsCartPlus, BsBookmarkPlus } from "react-icons/bs"
 
-const Card = ({ id, name, image, price }) => {
+const Card = ({ id, name, image, price, product }) => {
+  // const cart = useSelector((state) => state.cart.cart)
+  const dispatch = useDispatch()
+  // const addCartHandler = (name) => {
+  //   dispatch(addProduct(name))
+  // }
+
   return (
     <div className={styles.card}>
       <Link to={`/product/${id}`}>
@@ -20,7 +27,7 @@ const Card = ({ id, name, image, price }) => {
               <button>
                 <BsBookmarkPlus />
               </button>
-              <button>
+              <button onClick={() => dispatch(addProduct(product))}>
                 <BsCartPlus />
               </button>
             </div>

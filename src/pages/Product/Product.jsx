@@ -12,7 +12,7 @@ const Product = () => {
         </div>
         <CardInfo />
       </div>
-      <Some />
+      {/* <Some /> */}
     </section>
   )
 }

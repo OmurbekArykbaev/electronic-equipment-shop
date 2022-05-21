@@ -2,10 +2,12 @@ import React from "react"
 import styles from "./Header.module.css"
 import { Button, Input, LinkTo, LogoLink } from "../ui"
 import { BsCart3 } from "react-icons/bs"
-import { BiUser, BiBookmark, BiSearch } from "react-icons/bi"
+import { BiBookmark, BiSearch } from "react-icons/bi"
 import { AiOutlineUnorderedList } from "react-icons/ai"
+import { useSelector } from "react-redux"
 
 const Header = () => {
+  const cartCount = useSelector((state) => state.cart.cart)
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
@@ -25,7 +27,6 @@ const Header = () => {
             <LinkTo title="Акции" />
             <LinkTo title="Доставка" />
             <LinkTo title="Обратная связь" />
-            <LinkTo path="/cart" title="Корзина" />
           </ul>
         </div>
       </div>
@@ -43,9 +44,14 @@ const Header = () => {
           </div>
 
           <ul className={styles.links}>
-            <LogoLink logo={<BsCart3 />} title="Корзина" />
-            <LogoLink logo={<BiUser />} title="Войти" />
+            {/* <LogoLink logo={<BiUser />} title="Войти" /> */}
             <LogoLink logo={<BiBookmark />} title="Избранное" />
+            <LogoLink
+              path="/cart"
+              logo={<BsCart3 />}
+              title="Корзина"
+              count={cartCount.length}
+            />
           </ul>
         </div>
       </div>
