@@ -7,9 +7,11 @@ const data = [
     description:
       "Apple MacBook Pro 16 with Touch Bar, 9th-Gen 8-Core Intel i9 2.4GHz, 32GB RAM, 512GB SSD, AMD Radeon Pro5300M 4GB, Space Gray, Late 2019",
     brand: "Apple",
-    price: "70 990",
+    price: "70990",
     category: "laptop",
+    qty: 1,
   },
+
   {
     id: "2",
     name: "IPhone 13 Pro 8/256Gb, Blue",
@@ -18,9 +20,11 @@ const data = [
     description:
       "Apple MacBook Pro 16 with Touch Bar, 9th-Gen 8-Core Intel i9 2.4GHz, 32GB RAM, 512GB SSD, AMD Radeon Pro5300M 4GB, Space Gray, Late 2019",
     brand: "Apple",
-    price: "84 900",
+    price: "84900",
     category: "smartphone",
+    qty: 1,
   },
+
   {
     id: "3",
     name: "Samsung Galaxy S21 5G (SM-G991B)",
@@ -29,9 +33,11 @@ const data = [
     description:
       "Samsung Galaxy S21 - создан, чтобы быть в центре событий и внимания. Снимайте потрясающие фото и видео 8К, а также делайте невероятно четкие фотографии в разрешении 33 Мп прямо с отснятого видео.",
     brand: "Samsung",
-    price: "60 990",
+    price: "60990",
     category: "smartphone",
+    qty: 1,
   },
+
   {
     id: "4",
     name: "Apple Watch 6 40mm",
@@ -39,9 +45,11 @@ const data = [
     description:
       "Apple MacBook Pro 16 with Touch Bar, 9th-Gen 8-Core Intel i9 2.4GHz, 32GB RAM, 512GB SSD, AMD Radeon Pro5300M 4GB, Space Gray, Late 2019",
     brand: "Apple",
-    price: "35 500",
+    price: "35500",
     category: "watch",
+    qty: 1,
   },
+
   {
     id: "5",
     name: " Acer HDMI DP Nitro Gaming Monitor (24in, 165Hz, 1080P, 250c)",
@@ -49,9 +57,11 @@ const data = [
     description:
       "Apple MacBook Pro 16 with Touch Bar, 9th-Gen 8-Core Intel i9 2.4GHz, 32GB RAM, 512GB SSD, AMD Radeon Pro5300M 4GB, Space Gray, Late 2019",
     brand: "Acer",
-    price: "125 900",
+    price: "125900",
     category: "monitor",
+    qty: 1,
   },
+
   {
     id: "6",
     name: "Камера Alpha 7 III с 35-миллиметровой полнокадровой матрицей",
@@ -60,8 +70,9 @@ const data = [
     description:
       "Samsung Galaxy S21 - создан, чтобы быть в центре событий и внимания. Снимайте потрясающие фото и видео 8К, а также делайте невероятно четкие фотографии в разрешении 33 Мп прямо с отснятого видео.",
     brand: "Sony",
-    price: "209 990",
+    price: "209990",
     category: "camera",
+    qty: 1,
   },
 ]
 

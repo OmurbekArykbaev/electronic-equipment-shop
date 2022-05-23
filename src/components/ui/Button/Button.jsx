@@ -6,6 +6,9 @@ const Button = ({
   title = null,
   fill = false,
   circle = false,
+  size = "14px",
+  height = "",
+  onClick = null,
 }) => {
   const fillBtn = () => {
     if (fill) {
@@ -24,7 +27,14 @@ const Button = ({
   }
 
   return (
-    <button className={`${fillBtn()} ${circleBtn()}`}>
+    <button
+      onClick={onClick}
+      style={{
+        fontSize: size,
+        height: height,
+      }}
+      className={`${fillBtn()} ${circleBtn()}`}
+    >
       <span> {logo && logo}</span>
 
       <span>{title && title}</span>
