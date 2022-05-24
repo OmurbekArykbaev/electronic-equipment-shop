@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styles from "./CardinCart.module.css"
 import { BsTrash, BsPlus } from "react-icons/bs"
 import { BiMinus } from "react-icons/bi"
@@ -6,12 +6,37 @@ import {
   deleteProduct,
   addQuantityToItem,
   substractQuantityFromItem,
+  countTotalPrice,
+  addTotalPrice,
+  substractTotalPrice,
+  removeTotalPrice,
 } from "../../../Store/cartSlice"
 import { useDispatch } from "react-redux"
 
 const CardInCart = ({ id, name, image, price, qty }) => {
   const dispatch = useDispatch()
-  const total = qty * price
+
+  useEffect(() => {
+    const total = qty * +price
+    dispatch(countTotalPrice(total))
+  }, [])
+
+  const addQuanHandler = (id) => {
+    dispatch(addQuantityToItem(id))
+    dispatch(addTotalPrice(+price))
+  }
+  const substractQuanHandler = (id) => {
+    dispatch(substractQuantityFromItem(id))
+    dispatch(substractTotalPrice(+price))
+  }
+
+  const removeProductHandler = (id) => {
+    const total = qty * +price
+    dispatch(deleteProduct(id))
+    dispatch(removeTotalPrice(total))
+  }
+
+  // console.log()
 
   return (
     <li className={styles.card}>
@@ -21,14 +46,14 @@ const CardInCart = ({ id, name, image, price, qty }) => {
         <h1 className={styles.name}>{name}</h1>
 
         <div className={styles.btns}>
-          <BiMinus onClick={() => dispatch(substractQuantityFromItem(id))} />
+          <BiMinus onClick={() => substractQuanHandler(id)} />
           <span className={styles.quan}>{qty}</span>
-          <BsPlus onClick={() => dispatch(addQuantityToItem(id))} />
+          <BsPlus onClick={() => addQuanHandler(id)} />
         </div>
 
-        <span className={styles.price}>{total}</span>
+        <span className={styles.price}>{qty * price}</span>
         <div className={styles.remove}>
-          <BsTrash onClick={() => dispatch(deleteProduct(id))} />
+          <BsTrash onClick={() => removeProductHandler(id)} />
         </div>
       </div>
     </li>

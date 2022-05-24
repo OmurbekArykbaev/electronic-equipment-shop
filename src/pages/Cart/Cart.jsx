@@ -1,15 +1,24 @@
 import React, { useEffect } from "react"
 import styles from "./Cart.module.css"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { Button, Typography } from "../../components/ui"
 import CardInCart from "../../components/ui/CardInCart/CardInCart"
 import { useNavigate } from "react-router-dom"
+import { countTotalPrice } from "../../Store/cartSlice"
 
 const Cart = () => {
+  const dispatch = useDispatch()
   const productInCart = useSelector((state) => state.cart.cartItems)
-  const total = productInCart.reduce((acc, next) => acc + +next.price, 0)
-  console.log(total)
+  const total = useSelector((state) => state.cart.cartTotalPrice)
+  const cartQuanItems = useSelector((state) => state.cart.cartQuantityItems)
+
   const navigate = useNavigate()
+
+  // useEffect(() => {
+  //   const price = productInCart.reduce((acc, next) => acc + +next.price, 0)
+  //   dispatch(countTotalPrice(price))
+  //   console.log(price)
+  // }, [])
 
   return (
     <section className={styles.cart}>
@@ -18,7 +27,7 @@ const Cart = () => {
           <Button title={"Вернуться к товарам"} onClick={() => navigate("/")} />
           <div>
             <Typography
-              text={`Всего ${productInCart?.length} товаров на сумму  сом`}
+              text={`Всего ${cartQuanItems} товаров на сумму ${total} сом`}
               type="h1"
               size="24px"
               color="var(--color-prim)"
