@@ -103,4 +103,5 @@ export const {
   substractQuantityFromItem,
   addCartTotalPrice,
 } = cartSlice.actions
+
 export default cartSlice.reducer

@@ -1,16 +1,16 @@
 import React from "react"
 import { Banner } from "../../components"
 import { Card } from "../../components/ui"
-import data from "../../assets/data.js"
-
+import { useSelector } from "react-redux"
 import styles from "./Home.module.css"
 
 const HomePage = () => {
+  const allProductsBySearch = useSelector((state) => state.search.searchItems)
   return (
     <section className={styles.homepage}>
       <Banner />
       <div className={styles.wrapper}>
-        {data.map((p) => (
+        {allProductsBySearch.map((p) => (
           <Card
             key={p.id}
             id={p.id}
