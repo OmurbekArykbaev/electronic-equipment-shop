@@ -50,12 +50,14 @@ const CardInfo = ({ id, name, price, brand, product }) => {
             <Button
               onClick={() => dispatch(addProduct(product))}
               fill
+              // circle
+              // height="100px"
               size="16px"
               logo={<BsCartPlus />}
               title="В корзину"
             />
           )}
-          <Button circle fill logo={<BsBookmarkPlus />} />
+          {/* <Button circle fill logo={<BsBookmarkPlus />} /> */}
         </div>
         <h4>в расрочку от 3000 сом в месяц</h4>
         <div className={styles.shipping}>

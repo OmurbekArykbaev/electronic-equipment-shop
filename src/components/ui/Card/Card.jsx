@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import styles from "./Card.module.css"
 import { addProduct } from "../../../Store/cartSlice"
-import { BsCartPlus, BsFillCartCheckFill, BsBookmarkPlus } from "react-icons/bs"
+import { BsCartPlus, BsFillCartCheckFill } from "react-icons/bs"
 
 const Card = ({ id, name, image, price, product }) => {
   const [isClicked, setIsClicked] = useState(false)
@@ -29,9 +29,9 @@ const Card = ({ id, name, image, price, product }) => {
           <span>{price} сом</span>
 
           <div className={styles.btns}>
-            <button>
+            {/* <button>
               <BsBookmarkPlus />
-            </button>
+            </button> */}
 
             {isClicked ? (
               <button className={styles.active} onClick={() => false}>

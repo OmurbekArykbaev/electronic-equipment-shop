@@ -1,9 +1,8 @@
 import React from "react"
 import styles from "./Header.module.css"
-import { Button, Input, LinkTo, LogoLink } from "../ui"
+import { Input, LinkTo, LogoLink } from "../ui"
 import { BsCart3 } from "react-icons/bs"
-import { BiBookmark, BiSearch } from "react-icons/bi"
-import { AiOutlineUnorderedList } from "react-icons/ai"
+import { BiSearch } from "react-icons/bi"
 import { useSelector } from "react-redux"
 
 const Header = () => {
@@ -33,9 +32,9 @@ const Header = () => {
       {/* 2nd floor navbar */}
 
       <div className={styles.wrapper}>
-        <div className={styles.category}>
+        {/* <div className={styles.category}>
           <Button logo={<AiOutlineUnorderedList />} title="Каталог товаров" />
-        </div>
+        </div> */}
 
         <div className={styles.navbar}>
           <div className={styles.search}>
@@ -45,7 +44,7 @@ const Header = () => {
 
           <ul className={styles.links}>
             {/* <LogoLink logo={<BiUser />} title="Войти" /> */}
-            <LogoLink logo={<BiBookmark />} title="Избранное" />
+            {/* <LogoLink logo={<BiBookmark />} title="Избранное" /> */}
             <LogoLink
               path="/cart"
               logo={<BsCart3 />}
