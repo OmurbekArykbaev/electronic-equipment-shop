@@ -4,6 +4,7 @@ const initialState = {
   cartItems: localStorage.getItem("cartItems")
     ? JSON.parse(localStorage.getItem("cartItems"))
     : [],
+
   cartQuantityItems: 0,
   cartTotalPrice: 0,
 }
@@ -23,11 +24,6 @@ export const cartSlice = createSlice({
         0
       )
 
-      // state.cartTotalPrice += state.cartItems.reduce(
-      //   (acc, next) => acc + +next.price,
-      //   0
-      // )
-
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },
 
@@ -45,12 +41,6 @@ export const cartSlice = createSlice({
         (acc, next) => acc + next.qty,
         0
       )
-
-      // Cart Total Price
-      // state.cartTotalPrice = state.cartItems.reduce(
-      //   (acc, next) => acc + +next.price,
-      //   0
-      // )
 
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },
@@ -70,11 +60,6 @@ export const cartSlice = createSlice({
         0
       )
 
-      // state.cartTotalPrice += state.cartItems.reduce(
-      //   (acc, next) => acc + +next.price,
-      //   0
-      // )
-
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },
 
@@ -87,19 +72,6 @@ export const cartSlice = createSlice({
           item.qty < 2 ? (item.qty = 1) : (item.qty -= 1)
         }
       })
-
-      // const currentTotalPrice = state.cartTotalPrice
-
-      // state.cartItems.forEach((item) => {
-      //   if (item.id === action.payload) {
-      //     // Substract Total Price
-      //     if (state.cartTotalPrice <= currentTotalPrice) {
-      //       state.cartTotalPrice = +item.price
-      //     } else {
-      //       state.cartTotalPrice = +item.price
-      //     }
-      //   }
-      // })
 
       const currentQuan = (state.cartQuantityItems = state.cartItems.reduce(
         (acc, next) => acc + next.qty,
@@ -118,26 +90,8 @@ export const cartSlice = createSlice({
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },
 
-    countTotalPrice: (state, action) => {
+    addCartTotalPrice: (state, action) => {
       state.cartTotalPrice = action.payload
-    },
-    addTotalPrice: (state, action) => {
-      state.cartTotalPrice += action.payload
-    },
-
-    substractTotalPrice: (state, action) => {
-      if (state.cartTotalPrice <= action.payload) {
-        state.cartTotalPrice = action.payload
-      } else {
-        state.cartTotalPrice -= action.payload
-      }
-    },
-    removeTotalPrice: (state, action) => {
-      if (state.cartTotalPrice <= 0) {
-        state.cartTotalPrice = action.payload
-      } else {
-        state.cartTotalPrice = 0
-      }
     },
   },
 })
@@ -147,9 +101,6 @@ export const {
   deleteProduct,
   addQuantityToItem,
   substractQuantityFromItem,
-  countTotalPrice,
-  addTotalPrice,
-  substractTotalPrice,
-  removeTotalPrice,
+  addCartTotalPrice,
 } = cartSlice.actions
 export default cartSlice.reducer
