@@ -1,6 +1,5 @@
 .header {
   /* background-color: #9c7178; */
-  border-bottom: 1px solid #000;
 }
 
 .wrapper {
@@ -11,6 +10,10 @@
   flex-direction: row;
   justify-content: center;
   margin: 0 auto;
+}
+
+.wrapper:last-child {
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
 }
 /* First Floor */
 .logo {

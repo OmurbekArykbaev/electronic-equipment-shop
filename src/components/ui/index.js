@@ -4,5 +4,6 @@ import Input from "./Input/Input"
 import LinkTo from "./Link/Link"
 import LogoLink from "./LogoLink/LogoLink"
 import Typography from "./Typography/Typography"
+import CardInCart from "./CardInCart/CardInCart"
 
-export { Button, Card, Input, LinkTo, LogoLink, Typography }
+export { Button, Card, Input, LinkTo, LogoLink, Typography, CardInCart }

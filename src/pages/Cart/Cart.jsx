@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react"
-import styles from "./Cart.module.css"
 import { useSelector, useDispatch } from "react-redux"
-import { Button, Typography } from "../../components/ui"
-import CardInCart from "../../components/ui/CardInCart/CardInCart"
+import { Button, Typography, CardInCart } from "../../components/ui"
 import { useNavigate } from "react-router-dom"
 import { addCartTotalPrice } from "../../Store/cartSlice"
+import styles from "./Cart.module.css"
 
 const Cart = () => {
   const dispatch = useDispatch()

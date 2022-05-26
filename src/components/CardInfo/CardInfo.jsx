@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react"
-import styles from "./CardInfo.module.css"
 import { addProduct } from "../../Store/cartSlice"
 import { useSelector, useDispatch } from "react-redux"
-import {
-  BsCartPlus,
-  BsFillCartCheckFill,
-  BsBookmarkPlus,
-  BsTruck,
-} from "react-icons/bs"
+import { BsCartPlus, BsFillCartCheckFill, BsTruck } from "react-icons/bs"
 import { Button, Typography } from "../../components/ui"
 import { useNavigate } from "react-router-dom"
+
+import styles from "./CardInfo.module.css"
 
 const CardInfo = ({ id, name, price, brand, product }) => {
   const [isClicked, setIsClicked] = useState(false)

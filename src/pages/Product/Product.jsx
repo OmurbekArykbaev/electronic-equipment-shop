@@ -1,16 +1,13 @@
-import React, { useEffect } from "react"
-import CardInfo from "../../components/CardInfo/CardInfo"
-import Some from "../../components/SomeProductBlock/Some"
-import styles from "./Product.module.css"
+import React from "react"
+import { CardInfo } from "../../components/"
 import { useParams } from "react-router-dom"
-import { useSelector } from "react-redux"
 import data from "../../assets/data"
+
+import styles from "./Product.module.css"
 
 const Product = () => {
   const params = useParams()
   const [productDetail] = data.filter((product) => product.id === params.id)
-
-  console.log(productDetail)
 
   return (
     <section className={styles.product}>
