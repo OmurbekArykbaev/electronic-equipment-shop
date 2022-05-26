@@ -9,6 +9,8 @@ const Button = ({
   size = "14px",
   height = "",
   onClick = null,
+  bcColor = "",
+  color = "",
 }) => {
   const fillBtn = () => {
     if (fill) {
@@ -30,8 +32,10 @@ const Button = ({
     <button
       onClick={onClick}
       style={{
+        backgroundColor: bcColor,
         fontSize: size,
         height: height,
+        color: color,
       }}
       className={`${fillBtn()} ${circleBtn()}`}
     >
