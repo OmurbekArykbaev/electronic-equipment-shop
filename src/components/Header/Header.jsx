@@ -36,10 +36,10 @@ const Header = () => {
           <Button logo={<AiOutlineUnorderedList />} title="Каталог товаров" />
         </div> */}
 
-        <div className={styles.navbar}>
+        <div className={styles.navbarTools}>
           <div className={styles.search}>
-            <Input />
             <BiSearch />
+            <Input />
           </div>
 
           <ul className={styles.links}>

@@ -4,14 +4,16 @@
   justify-content: center;
   align-items: center;
   border: none;
-  border-bottom: 1px solid #dfdfe1;
+  border: 1px solid #dfdfe1;
+  border-radius: 10rem;
   font-size: 16px;
-  padding: 1px 53px 5px 2px;
+  padding: 10px 30px;
+  transition: all 1s;
 }
 
 .input:hover,
 .input:focus {
-  border-bottom: 1px solid var(--color-prim);
+  border: 1px solid var(--color-dark);
 }
 .input:active,
 .input:focus {

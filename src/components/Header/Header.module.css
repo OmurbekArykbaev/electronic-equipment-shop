@@ -32,7 +32,8 @@
   line-height: 14px;
 }
 
-.navbar {
+.navbar,
+.navbarTools {
   width: 100%;
   display: flex;
   align-items: center;
@@ -53,9 +54,22 @@
 }
 
 .search {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 30%;
+}
+
+.search > svg {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+}
+
+.navbarTools {
+  justify-content: flex-end;
+  /* width: 80%; */
 }
 
 .links {
