@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import styles from "./Input.module.css"
 import data from "../../../assets/data"
 import { addSearchProducts } from "../../../Store/searchResultSlice"
@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux"
 
 const Input = () => {
   const [value, setValue] = useState("")
-  const inputRef = useRef(null)
 
   const dispatch = useDispatch()
 

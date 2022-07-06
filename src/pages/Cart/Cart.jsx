@@ -18,7 +18,7 @@ const Cart = () => {
     productInCart.forEach((p) => (totalQuantitySum += +p.price * p.qty))
     setSum(totalQuantitySum)
     dispatch(addCartTotalPrice(totalQuantitySum))
-  }, [cartQuanItems])
+  }, [dispatch, productInCart])
 
   return (
     <section className={styles.cart}>

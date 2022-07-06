@@ -13,7 +13,7 @@ const Card = ({ id, name, image, price, product }) => {
   useEffect(() => {
     const hasInCart = cart.filter((product) => product.id === id)
     hasInCart.length > 0 ? setIsClicked(true) : setIsClicked(false)
-  }, [cart])
+  }, [cart, id])
 
   return (
     <div className={styles.card}>

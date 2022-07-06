@@ -17,7 +17,7 @@ const CardInfo = ({ id, name, price, brand, product }) => {
     const hasInCart = cart.filter((product) => product.id === id)
     hasInCart.length > 0 ? setIsClicked(true) : setIsClicked(false)
     console.log(product)
-  }, [cart])
+  }, [cart, id, product])
 
   return (
     <div className={styles.cardInfo}>
